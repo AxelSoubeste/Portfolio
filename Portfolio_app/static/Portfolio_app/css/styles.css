@@ -1,0 +1,209 @@
+body {
+    background-image: url("/static/Portfolio_app/image/fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Patrick Hand', cursive;
+}
+
+.pizarra-base {
+    margin: 50px 0;
+    padding: 30px;
+
+    color: #f5f5f5;
+    font-size: 20px;
+
+    border: 8px solid #5c3b1e;
+    border-radius: 10px;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+
+    background: linear-gradient(
+        135deg,
+        #1a1a1a,
+        #2b2b2b
+    );
+}
+
+.pizarra {
+    width: 100%;
+}
+
+.pizarra_perfil {
+    margin: 0;
+    text-align: right;
+    width: 400px;
+    padding: 20px;
+}
+
+.seccion-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 50px;
+}
+
+.mitad {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.mitad:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 30px;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.perfil img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+
+    border-radius: 0;
+    border: 5px solid #5c3b1e;
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+.nombre {
+    color: #f5f5f5;
+}
+
+.rol {
+    color: #ccc;
+    font-size: 16px;
+    margin: 0;
+}
+
+.menu-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.menu-btn {
+    background-color: #5c3b1e;
+    color: white;
+    border: none;
+    width: 55px;
+    height: 55px;
+    font-size: 26px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-btn:hover {
+    background-color: #7a4a24;
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+.menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    background-color: rgba(20, 20, 20, 0.95);
+    border: 2px solid #5c3b1e;
+    border-radius: 12px;
+    padding: 15px;
+    min-width: 200px;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    
+    transition: all 0.3s ease;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    background-color: #5c3b1e;
+}
+
+.menu {
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+}
+
+.menu.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.skills-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+
+.skills-col h3 {
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+.skills-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-col li {
+    margin-bottom: 8px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.skills-col li::before {
+    content: "•";
+    color: #5c3b1e;
+    position: absolute;
+    left: 0;
+}
+
+.skills-col {
+    flex: 1;
+    background: rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+    }
+}

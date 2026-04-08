@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>{% block tittle %}Portfolio{% endblock %}</title>
+
+        {% load static %}
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'Portfolio_app/css/styles.css' %}">
+</head>
+<body>
+        <div class="menu-container">
+                        <button class="menu-btn" onclick="toggleMenu()">𝛑</button>
+
+                        <div id="menu" class="menu">
+                                <a href="{% url 'home' %}">About Me</a>
+                                <a href="{% url 'projects' %}">Projects</a>
+                                <a href="{% url 'contact' %}">Contact Me</a>
+                        </div>
+                </div>
+
+        {% block content %}
+        {% endblock %}
+        <script>
+                function toggleMenu() {
+                        const menu = document.getElementById("menu");
+                        menu.classList.toggle("active");
+                }
+        </script>
+
+        <script>
+                document.addEventListener("click", function(event) {
+                        const menu = document.getElementById("menu");
+                        const button = document.querySelector(".menu-btn");
+
+                        if (!menu.contains(event.target) && !button.contains(event.target)) {
+                                menu.classList.remove("active");
+                        }
+                });
+        </script>
+</body>
+</html>

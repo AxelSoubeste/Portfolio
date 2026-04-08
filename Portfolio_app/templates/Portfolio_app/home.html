@@ -1,0 +1,73 @@
+{% extends 'Portfolio_app/base.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+<div class="seccion-principal">
+
+    <div class="mitad">
+        <div class="pizarra-base pizarra">
+            <h1>About me</h1>
+            <p>
+                Software developer with experience in Python, SQL, and intermediate-level C, focused on problem-solving and the development of efficient and scalable solutions.
+                Specialized in backend development using Django, with knowledge of database design and management.
+                Seeking to continue growing professionally in web application development and robust systems.
+            </p>
+        </div>
+
+        <div class="pizarra-base pizarra">
+        <h2>My skills</h2>
+
+        <div class="skills-container">
+            <div class="skills-col">
+                <h3>Hard Skills</h3>
+                <ul>
+                    <li>Python (POO, Pandas)</li>
+                    <li>Django (REST APIs)</li>
+                    <li>SQL</li>
+                    <li>C (intermediate)</li>
+                </ul>
+            </div>
+
+            <div class="skills-col">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Analytical thinking</li>
+                    <li>Problem-solving</li>
+                    <li>Teamwork</li>
+                    <li>Communication</li>
+                    <li>Adaptability</li>
+                    <li>Continuous learning</li>
+                </ul>
+            </div>
+
+            <div class="skills-col">
+                <h3>Tools</h3>
+                <ul>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>Excel</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="mitad">
+        <div class="perfil">
+            <img src="{% static 'Portfolio_app/image/perfil.jpg' %}" alt="Mi foto">
+
+            <div class="pizarra-base pizarra_perfil">
+                <h3 class="nombre">Axel Fernando Soubeste</h3>
+                <p class="rol">Python & C Developer | Software Development Student | Data Analyst | Passionate about Programming and Technology</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
